@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('./images/2384075.jpg'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color:white;
+    background-color: darkblue;
+    margin-left:500px;
+    margin-right:500px; /* Dark blue color for the title */
+}
+
+/* Style to ensure questions appear bold */
+.question-text {
+    font-weight: bold;
+}
+
+/* Blinking effect for the timer */
+@keyframes blink {
+    0% { color: red; }
+    50% { color: transparent; }
+    100% { color: red; }
+}
+
+.blink {
+    animation: blink 1s step-start infinite;
+    font-weight: bold; /* Emphasize the urgency */
+}
+
+#setup, #quiz-container, #feedback-container {
+    max-width: 500px; /* Decreased width */
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+label, select, input, button {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input, select {
+    height: 3rem; /* Increased input field height (2 inches extra roughly equals 3rem) */
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 5px 0;
+    gap: 8px;
+}
+
+.options input[type="radio"] {
+    margin: 0;
+}
+
+.feedback {
+    margin-top: 10px;
+    color: red;
+}
+
+#feedback-container {
+    text-align: center;
+}
+
+#final-score {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Timer Blinking Effect */
+.timer.blink {
+    animation: blink 1s step-start infinite;
+    color:red;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Buttons styling */
+#startagain, #exit-btn-below {
+    padding: 12px 30px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease;
+}
+
+/* Start Again button color */
+#startagain {
+    background-color: #4CAF50; /* Green */
+}
+
+/* Exit button color */
+#exit-btn-below {
+    background-color: #f44336; /* Red */
+}
+
+/* Hover effects */
+#startagain:hover, #exit-btn-below:hover {
+    transform: scale(1.1);
+}

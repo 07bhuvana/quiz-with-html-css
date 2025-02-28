@@ -1,0 +1,12 @@
+// Utility function to fetch a pool based on subject
+const getPoolForSubject = (subject) => { /* Logic */ };
+
+// Timer function to update the countdown
+function startTimer() { /* Logic */ }
+
+
+
+if (!name || !subject || !numQuestions) {
+    alert('Please fill in all fields!');
+    return;
+}

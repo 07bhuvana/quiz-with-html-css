@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz System</title>
+</head>
+<body>
+    <h1>Online Quiz System</h1>
+
+    <!-- Form to get user input -->
+    <div id="setup">
+        <label for="name" ><b>Enter Your Name:</b></label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email"><b>Enter Your Email:</b></label>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="phone"><b>Enter Your Phone Number:</b></label>
+        <input type="tel" id="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required>
+
+        <label for="subject"><b>Select Subject:</b></label>
+        <select id="subject" required>
+            <option value="" disabled selected>Select Subject</option>
+            <option value="java">Java</option>
+            <option value="software testing">Software Testing</option>
+            <option value="software configuration management">Software Configuration Management</option>
+        </select>
+
+        <label for="numQuestions"><b>Number of Questions:</b></label>
+        <input type="number" id="numQuestions" placeholder="e.g. 3" min="1" required>
+
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-container" style="display: none;">
+        <div id="timer" class="timer"></div>
+        <div id="questions"></div>
+        <button id="submit-btn" onclick="submitQuiz()" disabled>Submit</button>
+    </div>
+
+    <!-- Feedback Section -->
+    <div id="feedback-container" style="display: none;">
+        <h2>Quiz Feedback</h2>
+        <div id="feedback"></div>
+        <p id="final-score"></p>
+        <p id="feedback-quote"></p>
+        <button id="level2-btn" style="display: none;" onclick="startLevel2Quiz()">Proceed to Level 2</button>
+        <button id="exit-btn" style="display: none;" onclick="exitQuiz()">Exit</button>
+        
+    </div>
+
+   <!-- Thank You Section -->
+<div id="thank-you" style="display: none; text-align: center; margin-top: 20px;">
+    <h2>Thank You for Completing the Quiz!</h2>
+    <b>We hope you enjoyed the quiz and learned something new. 😊</b>
+
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+        <button id="startagain" onclick="reloadPage()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Start Again</button>
+        <button id="exit-btn-below" onclick="exitPage()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #f44336; color: white; border: none; border-radius: 5px;">Exit</button>
+    </div>
+     
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
